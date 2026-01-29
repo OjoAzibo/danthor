@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brolægger Dannebrolægning | En sten sikker løsning</title>
+  <title>Dannebrolægning | En sten sikker løsning</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Professionel brolægger. Indkørsler, terrasser, støttemure og belægning. En sten sikker løsning. Ring 50 56 70 65.">
+  <meta name="description" content="Professionel brolægger. Indkørsler, terrasser og belægning. En sten sikker løsning. Ring 50 56 70 65.">
 
   <style>
     body {
@@ -25,7 +24,6 @@
       border-bottom: 6px solid #b40000;
     }
 
-    /* LOGO */
     .logo {
       display: grid;
       grid-template-columns: repeat(2, 28px);
@@ -94,11 +92,32 @@
       margin: 0.8rem auto 0;
     }
 
+    /* HERO MED BAGGRUNDSBILLEDE */
     .hero {
+      position: relative;
       text-align: center;
       background: #fff;
       border-radius: 16px;
+      overflow: hidden;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+        url("projekt2.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: blur(1.5px);
+      z-index: 0;
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 1;
     }
 
     .btn {
@@ -126,29 +145,30 @@
       box-shadow: 0 8px 22px rgba(0,0,0,0.08);
     }
 
-    /* TRUST */
-    .trust {
-      background: #f5f5f5;
-      border-radius: 18px;
-    }
-
-    .trust ul {
-      list-style: none;
-      padding: 0;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .trust li {
-      padding: 0.6rem 0;
-      font-weight: 500;
-    }
-
     .contact {
-      background: linear-gradient(135deg, #1c1c1c, #000);
+      position: relative;
       color: #fff;
       text-align: center;
       border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .contact::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("projekt4.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: blur(1.5px);
+      z-index: 0;
+    }
+
+    .contact > * {
+      position: relative;
+      z-index: 1;
     }
 
     footer {
@@ -159,7 +179,6 @@
       font-size: 0.9rem;
     }
 
-    /* 📞 STICKY CALL – MOBIL */
     .call-now {
       display: none;
     }
@@ -195,44 +214,28 @@
     <span class="bottom-left"></span>
     <span class="bottom-right"></span>
   </div>
-
-  <h1>Brolægger Dannebrolægning</h1>
+  <h1>Dannebrolægning</h1>
   <p>En sten sikker løsning</p>
 </header>
 
 <nav>
   <a href="#ydelser">Ydelser</a>
-  <a href="#projekter">Projekter</a>
-  <a href="#om">Om os</a>
   <a href="#kontakt">Kontakt</a>
 </nav>
 
 <section class="hero">
   <h2>Professionel brolægning fra bund til færdigt resultat</h2>
-  <p>
-    Vi udfører brolægning, indkørsler, terrasser og støttemure med fokus på kvalitet,
-    korrekt bundopbygning og et resultat, der holder i mange år.
-  </p>
+  <p>Indkørsler, terrasser og belægning udført korrekt – første gang.</p>
   <a href="#kontakt" class="btn">Få et gratis tilbud</a>
 </section>
 
 <section id="ydelser">
   <h2>Vores ydelser</h2>
   <div class="grid">
-    <div class="card"><h3>Indkørsler & terrasser</h3></div>
-    <div class="card"><h3>Støttemure & trapper</h3></div>
-    <div class="card"><h3>Belægning & anlæg</h3></div>
+    <div class="card">Indkørsler & terrasser</div>
+    <div class="card">Støttemure & trapper</div>
+    <div class="card">Belægning & anlæg</div>
   </div>
-</section>
-
-<section class="trust">
-  <h2>Derfor vælger kunder Dannebrolægning</h2>
-  <ul>
-    <li>✔ Over 20 års erfaring</li>
-    <li>✔ Korrekt bundopbygning</li>
-    <li>✔ Aftaler overholdes</li>
-    <li>✔ Solidt håndværk – ingen smutveje</li>
-  </ul>
 </section>
 
 <section id="kontakt" class="contact">
