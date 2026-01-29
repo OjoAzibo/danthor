@@ -114,6 +114,17 @@
       border-radius: 14px;
       box-shadow: 0 8px 22px rgba(0,0,0,0.08);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+
+    /* NEON-GLOW RUNDT OM PROJEKTBILLEDER */
+    .service img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service:hover img {
+      transform: scale(1.03);
+      box-shadow: 0 0 0 3px rgba(180,0,0,0.6), 0 0 25px rgba(180,0,0,0.55);
     }
 
     .service:hover {
@@ -192,9 +203,18 @@
 </head>
 <body>
 
-<header style="background:#fff; color:#222; padding:2.5rem 1rem; text-align:center; border-bottom:4px solid #b40000;">
-  <img src="logo.png.png" alt="Dannebrolægning logo" style="max-width:420px; width:90%; height:auto;" />
-  <p style="margin-top:1.2rem; font-size:1.2rem;">
+<header style="background:#fff; color:#222; padding:2.8rem 1rem 2.5rem; text-align:center; border-bottom:5px solid #b40000;">
+  <!-- RØD DEL AF LOGO ØVERST -->
+  <div style="display:flex; justify-content:center; margin-bottom:0.6rem;">
+    <img src="logo.png.png" alt="Dannebrolægning logo – rød del" style="max-width:160px; width:60%; height:auto; filter: drop-shadow(0 0 10px rgba(180,0,0,0.6));" />
+  </div>
+
+  <!-- TEKST UNDER -->
+  <h1 style="font-size:2.6rem; letter-spacing:2px; margin:0;">
+    DANNEBROLÆGNING
+  </h1>
+
+  <p style="margin-top:0.8rem; font-size:1.15rem; color:#444;">
     Professionelt brolæggerarbejde – kvalitet, der holder i mange år
   </p>
 </header>
