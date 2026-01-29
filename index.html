@@ -14,7 +14,6 @@
       line-height: 1.7;
     }
 
-    /* HEADER */
     header {
       background: #0f0f0f;
       color: #fff;
@@ -38,9 +37,9 @@
       box-shadow: 0 0 22px rgba(255,0,0,1), 0 0 45px rgba(180,0,0,0.95);
     }
 
-    .logo .top-right { grid-column: 2; grid-row: 1; }
-    .logo .bottom-left { grid-column: 1; grid-row: 2; }
-    .logo .bottom-right { grid-column: 2; grid-row: 2; }
+    .top-right { grid-column: 2; grid-row: 1; }
+    .bottom-left { grid-column: 1; grid-row: 2; }
+    .bottom-right { grid-column: 2; grid-row: 2; }
 
     header h1 {
       margin: 0;
@@ -52,13 +51,14 @@
     header p {
       margin-top: 1rem;
       color: #ddd;
+      font-size: 1.05rem;
     }
 
     /* NAV */
     nav {
       background: #b40000;
       text-align: center;
-      padding: 0.8rem;
+      padding: 0.9rem;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -66,12 +66,13 @@
 
     nav a {
       color: #fff;
-      margin: 0 1rem;
+      margin: 0.5rem 1rem;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
+      font-size: 1rem;
     }
 
-    /* SECTIONS */
     section {
       max-width: 1100px;
       margin: auto;
@@ -93,7 +94,6 @@
       margin: 0.8rem auto 0;
     }
 
-    /* HERO */
     .hero {
       text-align: center;
       background: #fff;
@@ -101,10 +101,16 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
     .btn {
       display: inline-block;
       margin-top: 2rem;
-      padding: 0.9rem 2rem;
+      padding: 1rem 2rem;
       background: #b40000;
       color: #fff;
       text-decoration: none;
@@ -113,7 +119,6 @@
       box-shadow: 0 6px 15px rgba(180,0,0,0.35);
     }
 
-    /* SERVICES + PROJECTS */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -139,7 +144,6 @@
       box-shadow: 0 0 0 3px rgba(180,0,0,0.6), 0 0 25px rgba(180,0,0,0.55);
     }
 
-    /* CONTACT */
     .contact {
       background: linear-gradient(135deg, #1c1c1c, #000);
       color: #fff;
@@ -155,8 +159,21 @@
       font-size: 0.9rem;
     }
 
-    @media (max-width: 768px) {
-      header h1 { font-size: 2rem; }
+    /* 📱 MOBIL */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      nav a {
+        margin: 0.4rem;
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
@@ -231,21 +248,20 @@
 <section id="om">
   <h2>Om Dannebrolægning</h2>
   <p style="text-align:center; max-width:800px; margin:auto;">
-    Dannebrolægning drives af Thor Sundstrøm og bygger på mange års erfaring,
-    faglig stolthed og fokus på kvalitet.
+    Dannebrolægning drives af Thor Sundstrøm med fokus på kvalitet,
+    faglig stolthed og ordentligt håndværk.
   </p>
 </section>
 
 <section id="kontakt" class="contact">
   <h2>Kontakt os</h2>
   <p><strong>Thor Sundstrøm – Brolægger</strong></p>
-  <p>Telefon: 50 56 70 65</p>
-  <p>Email: info@dannebrolaegning.dk</p>
-  <a href="tel:12345678" class="btn">Ring nu</a>
+  <p>Telefon: <a href="tel:50567065" style="color:#fff;">50 56 70 65</a></p>
+  <a href="tel:50567065" class="btn">Ring nu</a>
 </section>
 
 <footer>
-  © 2026 Dannebrolægning – Kvalitet, der kan ses og mærkes
+  © 2026 Dannebrolægning – En sten sikker løsning
 </footer>
 
 </body>
