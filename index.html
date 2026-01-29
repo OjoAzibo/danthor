@@ -1,275 +1,347 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dannebrolægning | En sten sikker løsning</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dannebrolægning | Brolægger Thor Sundstrøm</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #fafafa;
+    }
 
-<meta name="description" content="Professionel brolægger. Indkørsler, terrasser og belægning. En sten sikker løsning. Ring 50 56 70 65.">
+    header {
+      background: #fff;
+      color: #222;
+      padding: 2rem 1rem 2.5rem;
+      text-align: center;
+      border-bottom: 5px solid #b40000;
+    }
 
-<style>
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #fafafa;
-  color: #222;
-  line-height: 1.7;
-}
+    header img {
+      max-width: 420px;
+      width: 85%;
+      height: auto;
+    }
 
-/* HEADER */
-header {
-  background: #0f0f0f;
-  color: #fff;
-  text-align: center;
-  padding: 3rem 1rem;
-  border-bottom: 6px solid #b40000;
-}
+    header p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #444;
+    }
 
-.logo {
-  display: grid;
-  grid-template-columns: repeat(2, 28px);
-  grid-template-rows: repeat(2, 28px);
-  gap: 8px;
-  justify-content: center;
-  margin-bottom: 1.2rem;
-}
+    nav {
+      background: #b40000;
+      padding: 0.7rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-.logo span {
-  background: #b40000;
-  box-shadow: 0 0 22px rgba(255,0,0,1), 0 0 45px rgba(180,0,0,0.95);
-}
+    nav a {
+      color: #fff;
+      margin: 0 0.8rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
 
-.top-right { grid-column: 2; grid-row: 1; }
-.bottom-left { grid-column: 1; grid-row: 2; }
-.bottom-right { grid-column: 2; grid-row: 2; }
+    section {
+      padding: 3.5rem 1.2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 2.6rem;
-  letter-spacing: 3px;
-}
+    h2 {
+      text-align: center;
+      font-size: 2.1rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
 
-header p {
-  margin-top: 1rem;
-  color: #ddd;
-}
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #b40000;
+      margin: 0.8rem auto 0;
+      border-radius: 2px;
+    }
 
-/* NAV */
-nav {
-  background: #b40000;
-  text-align: center;
-  padding: 0.9rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+    .hero {
+      text-align: center;
+      background: linear-gradient(135deg, #f2f2f2, #ffffff);
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
 
-nav a {
-  color: #fff;
-  margin: 0.5rem 1rem;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .hero h2 {
+      margin-top: 0;
+    }
 
-/* SECTIONS */
-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 3rem 1rem;
-}
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
 
-h2 {
-  text-align: center;
-  font-size: 2rem;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.9rem 1.9rem;
+      background: #b40000;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 6px 15px rgba(180,0,0,0.35);
+    }
 
-h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #b40000;
-  margin: 0.8rem auto 0;
-}
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
 
-/* HERO */
-.hero {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  text-align: center;
-}
+    .service {
+      background: #fff;
+      padding: 2.2rem;
+      border-radius: 14px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 1rem 2rem;
-  background: #b40000;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-}
+    /* NEON-GLOW RUNDT OM PROJEKTBILLEDER */
+    .service img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-}
+    .service:hover img {
+      transform: scale(1.03);
+      box-shadow: 0 0 0 3px rgba(180,0,0,0.6), 0 0 25px rgba(180,0,0,0.55);
+    }
 
-.card {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 14px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-}
+    .service:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+    }
 
-/* CONTACT */
-.contact {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  border-radius: 18px;
-}
+    .about {
+      background: #f5f5f5;
+      border-radius: 18px;
+    }
 
-/* FORM */
-form input, form textarea {
-  width: 100%;
-  padding: 0.9rem;
-  margin-bottom: 0.8rem;
-  border-radius: 6px;
-  border: none;
-}
+    .contact {
+      background: linear-gradient(135deg, #1c1c1c, #000);
+      color: #fff;
+      text-align: center;
+      border-radius: 18px;
+    }
 
-/* FOOTER */
-footer {
-  background: #000;
-  color: #aaa;
-  text-align: center;
-  padding: 1.4rem;
-  font-size: 0.9rem;
-}
+    .contact p {
+      font-size: 1.05rem;
+    }
 
-/* 📸 SIDE GALLERY */
-.gallery-toggle {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #b40000;
-  color: #fff;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1.4rem;
-  border-radius: 10px 0 0 10px;
-  z-index: 999;
-}
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 1.4rem;
+      font-size: 0.9rem;
+    }
 
-.gallery {
-  position: fixed;
-  top: 0;
-  right: -320px;
-  width: 320px;
-  height: 100%;
-  background: #111;
-  padding: 1rem;
-  overflow-y: auto;
-  transition: right 0.3s ease;
-  z-index: 998;
-}
+    /* MOBIL OPTIMERING */
+    @media (max-width: 768px) {
+      header img {
+        width: 95%;
+      }
 
-.gallery.open {
-  right: 0;
-}
+      nav a {
+        display: inline-block;
+        margin: 0.4rem 0.6rem;
+        font-size: 0.9rem;
+      }
 
-.gallery img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-</style>
+      h2 {
+        font-size: 1.7rem;
+      }
+
+      section {
+        padding: 2.8rem 1rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 1.8rem 1rem 2.2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      nav {
+        padding: 0.6rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">
-    <span class="top-right"></span>
-    <span class="bottom-left"></span>
-    <span class="bottom-right"></span>
+<header style="background:#0f0f0f; color:#fff; padding:3.2rem 1rem 3rem; text-align:center; border-bottom:6px solid #b40000;">
+  <!-- RØDE KVADRATER – SAMME OPSTILLING SOM LOGO -->
+  <div style="display:grid; grid-template-columns: repeat(2, 28px); grid-template-rows: repeat(2, 28px); gap:8px; justify-content:center; margin-bottom:1.2rem;">
+    <span style="grid-column:1; grid-row:1; background:#b40000; box-shadow:0 0 18px rgba(255,0,0,0.9), 0 0 35px rgba(180,0,0,0.8);"></span>
+    <span style="grid-column:2; grid-row:1; background:#b40000; box-shadow:0 0 18px rgba(255,0,0,0.9), 0 0 35px rgba(180,0,0,0.8);"></span>
+    <span style="grid-column:2; grid-row:2; background:#b40000; box-shadow:0 0 18px rgba(255,0,0,0.9), 0 0 35px rgba(180,0,0,0.8);"></span>
   </div>
-  <h1>Dannebrolægning</h1>
-  <p>En sten sikker løsning</p>
+
+  <!-- FIRMANAVN -->
+  <h1 style="font-size:2.8rem; letter-spacing:3px; margin:0; text-shadow:0 0 14px rgba(180,0,0,0.7);">
+    DANNEBROLÆGNING
+  </h1>
+
+  <p style="margin-top:1rem; font-size:1.15rem; color:#ddd; max-width:700px; margin-left:auto; margin-right:auto;">
+    Professionelt brolæggerarbejde – kvalitet, der holder i mange år
+  </p>
 </header>
 
 <nav>
   <a href="#ydelser">Ydelser</a>
-  <a href="#kontakt">Tilbud</a>
+  <a href="#projekter">Projekter</a>
+  <a href="#om">Om os</a>
+  <a href="#kontakt">Kontakt</a>
 </nav>
 
 <section class="hero">
-  <h2>Professionel brolægning fra bund til færdigt resultat</h2>
-  <p>Indkørsler, terrasser og belægning udført korrekt – første gang.</p>
-  <a href="#kontakt" class="btn">Få et gratis tilbud</a>
+  <h2>Professionel brolægning med øje for detaljen</h2>
+  <p>
+    Hos Dannebrolægning får du gennemført håndværk, klar kommunikation og et resultat,
+    der både er flot at se på og stærkt nok til daglig brug.
+  </p>
+  <a class="btn" href="#kontakt">Få et gratis tilbud</a>
 </section>
 
 <section id="ydelser">
   <h2>Vores ydelser</h2>
-  <div class="grid">
-    <div class="card">Indkørsler & terrasser</div>
-    <div class="card">Støttemure & trapper</div>
-    <div class="card">Belægning & anlæg</div>
+  <div class="services">
+    <div class="service">
+      <h3>Indkørsler & terrasser</h3>
+      <p>
+        Vi skaber indkørsler og terrasser, der løfter hele boligens udtryk og samtidig
+        holder i mange år – uden sætninger og sjusk.
+      </p>
+    </div>
+    <div class="service">
+      <h3>Støttemure & trapper</h3>
+      <p>
+        Funktionelle og æstetiske løsninger i natursten og beton – perfekt til
+        niveauforskelle og skrånende terræn.
+      </p>
+    </div>
+    <div class="service">
+      <h3>Belægning & anlæg</h3>
+      <p>
+        Fra mindre haveprojekter til større entrepriser. Vi tager ansvar for hele
+        processen – fra bundopbygning til færdigt resultat.
+      </p>
+    </div>
   </div>
 </section>
 
-<!-- ✅ TILBUDSFORMULAR -->
-<section id="kontakt" class="contact">
-  <h2>Få et gratis tilbud</h2>
+<section id="projekter">
+  <h2>Vores arbejde</h2>
+  <div class="services">
 
-  <form action="mailto:tilthor@gmail.com" method="post" enctype="text/plain" style="max-width:500px; margin:auto;">
-    <input type="text" name="Navn" placeholder="Dit navn" required>
-    <input type="tel" name="Telefon" placeholder="Telefonnummer" required>
-    <input type="email" name="Email" placeholder="Email">
-    <textarea name="Besked" rows="5" placeholder="Beskriv dit projekt" required></textarea>
+    <div class="service">
+      <img src="projekt2.jpg" alt="Haveanlæg med natursten" style="width:100%; border-radius:10px; margin-bottom:1rem;" />
+      <h3>Haveanlæg med natursten</h3>
+      <p>
+        Eksklusivt haveanlæg med store kampesten og naturlige niveauer, der skaber et
+        roligt og harmonisk udtryk. Fokus på korrekt bundopbygning og lang holdbarhed.
+      </p>
+    </div>
 
-    <button type="submit" class="btn" style="width:100%;">
-      Send tilbudsforespørgsel
-    </button>
-  </form>
+    <div class="service">
+      <img src="projekt3.jpg" alt="Indgangsparti med belægning" style="width:100%; border-radius:10px; margin-bottom:1rem;" />
+      <h3>Indgangspartier & belægning</h3>
+      <p>
+        Flotte og funktionelle indgangspartier, der giver et solidt førstehåndsindtryk.
+        Udført med præcision og sans for detaljen.
+      </p>
+    </div>
 
-  <p style="margin-top:1.5rem;">
-    Eller ring direkte: <br>
-    <a href="tel:50567065" style="color:#fff; font-size:1.2rem; font-weight:bold;">
-       50 56 70 65
-    </a>
+    <div class="service">
+      <img src="projekt4.jpg" alt="Støttemur og stentrappe" style="width:100%; border-radius:10px; margin-bottom:1rem;" />
+      <h3>Støttemure & trapper</h3>
+      <p>
+        Løsninger til skrånende terræn med støttemure og stentrapper, der både er
+        praktiske og æstetiske.
+      </p>
+    </div>
+
+    <div class="service">
+      <img src="projekt5.jpg" alt="Terrasse og indkørsel" style="width:100%; border-radius:10px; margin-bottom:1rem;" />
+      <h3>Terrasser & indkørsler</h3>
+      <p>
+        Slidstærke belægninger til daglig brug – bygget korrekt fra bunden, så de holder
+        uden sætninger og revner.
+      </p>
+    </div>
+
+    <div class="service">
+      <img src="projekt6.jpg" alt="Brolagt haveområde" style="width:100%; border-radius:10px; margin-bottom:1rem;" />
+      <h3>Brolagte haveområder</h3>
+      <p>
+        Smukke og funktionelle haveområder, hvor materialevalg og udførelse går op i
+        en højere enhed.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="om" class="about">
+  <h2>Om Dannebrolægning</h2>
+  <p>
+    Dannebrolægning blev grundlagt i 2006 af brolægger Thor Sundstrøm. Med svendeprøve
+    siden 2000 og mange års erfaring i branchen er kvalitet og faglig stolthed altid i
+    centrum.
+  </p>
+  <p>
+    Thor har arbejdet med både store entrepriser og mindre opgaver for private kunder.
+    Det betyder, at du får en brolægger, der forstår både de tekniske detaljer og dine
+    ønsker – og som ikke går på kompromis med kvaliteten.
   </p>
 </section>
 
+<section id="kontakt" class="contact">
+  <h2>Kontakt os i dag</h2>
+  <p>Har du et projekt i tankerne? Så lad os tage en snak – det er helt uforpligtende.</p>
+  <p><strong>Thor Sundstrøm – Brolægger</strong></p>
+  <p>Telefon: 12 34 56 78</p>
+  <p>Email: info@dannebrolaegning.dk</p>
+  <a class="btn" href="tel:12345678">Ring nu</a>
+</section>
+
 <footer>
-  © 2026 Dannebrolægning – En sten sikker løsning
+  <p>© 2026 Dannebrolægning – Kvalitet, der kan ses og mærkes</p>
 </footer>
-
-<!-- 📸 PIL -->
-<div class="gallery-toggle" onclick="toggleGallery()">📸</div>
-
-<!-- 📸 GALLERI -->
-<div class="gallery" id="gallery">
-  <img src="projekt2.jpg">
-  <img src="projekt3.jpg">
-  <img src="projekt4.jpg">
-  <img src="projekt5.jpg">
-  <img src="projekt6.jpg">
-</div>
-
-<script>
-function toggleGallery() {
-  document.getElementById("gallery").classList.toggle("open");
-}
-</script>
 
 </body>
 </html>
