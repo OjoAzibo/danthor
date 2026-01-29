@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dannebrolægning | En sten sikker løsning</title>
+<title>Brolægger Dannebrolægning | En sten sikker løsning</title>
+
+<meta name="description" content="Professionel brolægger. Indkørsler, terrasser og belægning. En sten sikker løsning. Ring 50 56 70 65.">
 
 <style>
 body {
@@ -108,6 +110,8 @@ h2::after {
   text-decoration: none;
   font-weight: bold;
   border-radius: 30px;
+  border: none;
+  cursor: pointer;
 }
 
 /* GRID */
@@ -130,6 +134,15 @@ h2::after {
   color: #fff;
   text-align: center;
   border-radius: 18px;
+}
+
+/* FORM */
+form input, form textarea {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 0.8rem;
+  border-radius: 6px;
+  border: none;
 }
 
 /* FOOTER */
@@ -189,13 +202,13 @@ footer {
     <span class="bottom-left"></span>
     <span class="bottom-right"></span>
   </div>
-  <h1>Dannebrolægning</h1>
+  <h1>Brolægger Dannebrolægning</h1>
   <p>En sten sikker løsning</p>
 </header>
 
 <nav>
   <a href="#ydelser">Ydelser</a>
-  <a href="#kontakt">Kontakt</a>
+  <a href="#kontakt">Tilbud</a>
 </nav>
 
 <section class="hero">
@@ -213,11 +226,27 @@ footer {
   </div>
 </section>
 
+<!-- ✅ TILBUDSFORMULAR -->
 <section id="kontakt" class="contact">
-  <h2>Kontakt os</h2>
-  <p><strong>Thor Sundstrøm – Brolægger</strong></p>
-  <p><a href="tel:50567065" style="color:#fff;"> Telefon: 50 56 70 65</a></p>
-  <a href="tel:50567065" class="btn">Ring nu</a>
+  <h2>Få et gratis tilbud</h2>
+
+  <form action="mailto:tilthor@gmail.com" method="post" enctype="text/plain" style="max-width:500px; margin:auto;">
+    <input type="text" name="Navn" placeholder="Dit navn" required>
+    <input type="tel" name="Telefon" placeholder="Telefonnummer" required>
+    <input type="email" name="Email" placeholder="Email">
+    <textarea name="Besked" rows="5" placeholder="Beskriv dit projekt" required></textarea>
+
+    <button type="submit" class="btn" style="width:100%;">
+      Send tilbudsforespørgsel
+    </button>
+  </form>
+
+  <p style="margin-top:1.5rem;">
+    Eller ring direkte: <br>
+    <a href="tel:50567065" style="color:#fff; font-size:1.2rem; font-weight:bold;">
+      📞 50 56 70 65
+    </a>
+  </p>
 </section>
 
 <footer>
@@ -225,7 +254,7 @@ footer {
 </footer>
 
 <!-- 📸 PIL -->
-<div class="gallery-toggle" onclick="toggleGallery()"> ← </div>
+<div class="gallery-toggle" onclick="toggleGallery()">📸</div>
 
 <!-- 📸 GALLERI -->
 <div class="gallery" id="gallery">
