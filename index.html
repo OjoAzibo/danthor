@@ -13,26 +13,6 @@
       background: #fafafa;
     }
 
-    header {
-      background: #fff;
-      color: #222;
-      padding: 2rem 1rem 2.5rem;
-      text-align: center;
-      border-bottom: 5px solid #b40000;
-    }
-
-    header img {
-      max-width: 420px;
-      width: 85%;
-      height: auto;
-    }
-
-    header p {
-      margin-top: 1rem;
-      font-size: 1.1rem;
-      color: #444;
-    }
-
     nav {
       background: #b40000;
       padding: 0.7rem;
@@ -80,10 +60,6 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
-    .hero h2 {
-      margin-top: 0;
-    }
-
     .hero p {
       max-width: 700px;
       margin: auto;
@@ -114,10 +90,8 @@
       border-radius: 14px;
       box-shadow: 0 8px 22px rgba(0,0,0,0.08);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
-      position: relative;
     }
 
-    /* NEON-GLOW RUNDT OM PROJEKTBILLEDER */
     .service img {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -125,11 +99,6 @@
     .service:hover img {
       transform: scale(1.03);
       box-shadow: 0 0 0 3px rgba(180,0,0,0.6), 0 0 25px rgba(180,0,0,0.55);
-    }
-
-    .service:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
     }
 
     .about {
@@ -144,10 +113,6 @@
       border-radius: 18px;
     }
 
-    .contact p {
-      font-size: 1.05rem;
-    }
-
     footer {
       background: #000;
       color: #aaa;
@@ -155,68 +120,36 @@
       padding: 1.4rem;
       font-size: 0.9rem;
     }
-
-    /* MOBIL OPTIMERING */
-    @media (max-width: 768px) {
-      header img {
-        width: 95%;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 0.4rem 0.6rem;
-        font-size: 0.9rem;
-      }
-
-      h2 {
-        font-size: 1.7rem;
-      }
-
-      section {
-        padding: 2.8rem 1rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
-
-      .btn {
-        width: 100%;
-        max-width: 320px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header {
-        padding: 1.8rem 1rem 2.2rem;
-      }
-
-      header p {
-        font-size: 1rem;
-      }
-
-      nav {
-        padding: 0.6rem;
-      }
-    }
   </style>
 </head>
 <body>
 
 <header style="background:#0f0f0f; color:#fff; padding:3.2rem 1rem 3rem; text-align:center; border-bottom:6px solid #b40000;">
-  <!-- RØDE KVADRATER – SAMME OPSTILLING SOM LOGO -->
-  <div style="display:grid; grid-template-columns: repeat(2, 28px); grid-template-rows: repeat(2, 28px); gap:8px; justify-content:center; margin-bottom:1.2rem;">
-    <span style="grid-column:1; grid-row:1; background:#b40000; box-shadow:0 0 18px rgba(255,0,0,0.9), 0 0 35px rgba(180,0,0,0.8);"></span>
-    <span style="grid-column:2; grid-row:1; background:#b40000; box-shadow:0 0 18px rgba(255,0,0,0.9), 0 0 35px rgba(180,0,0,0.8);"></span>
-    <span style="grid-column:2; grid-row:2; background:#b40000; box-shadow:0 0 18px rgba(255,0,0,0.9), 0 0 35px rgba(180,0,0,0.8);"></span>
+
+  <!-- FIRKANTER – KORREKT ORIENTERING -->
+  <div style="
+    display:grid;
+    grid-template-columns: repeat(2, 28px);
+    grid-template-rows: repeat(2, 28px);
+    gap:8px;
+    justify-content:center;
+    margin-bottom:1.2rem;
+  ">
+    <!-- ØVERST HØJRE -->
+    <span style="grid-column:2; grid-row:1; background:#b40000; box-shadow:0 0 22px rgba(255,0,0,1), 0 0 45px rgba(180,0,0,0.95);"></span>
+
+    <!-- NEDERST VENSTRE -->
+    <span style="grid-column:1; grid-row:2; background:#b40000; box-shadow:0 0 22px rgba(255,0,0,1), 0 0 45px rgba(180,0,0,0.95);"></span>
+
+    <!-- NEDERST HØJRE -->
+    <span style="grid-column:2; grid-row:2; background:#b40000; box-shadow:0 0 22px rgba(255,0,0,1), 0 0 45px rgba(180,0,0,0.95);"></span>
   </div>
 
-  <!-- FIRMANAVN -->
-  <h1 style="font-size:2.8rem; letter-spacing:3px; margin:0; text-shadow:0 0 14px rgba(180,0,0,0.7);">
+  <h1 style="font-size:2.8rem; letter-spacing:3px; margin:0; text-shadow:0 0 16px rgba(180,0,0,0.75);">
     DANNEBROLÆGNING
   </h1>
 
-  <p style="margin-top:1rem; font-size:1.15rem; color:#ddd; max-width:700px; margin-left:auto; margin-right:auto;">
+  <p style="margin-top:1rem; font-size:1.15rem; color:#ddd;">
     Professionelt brolæggerarbejde – kvalitet, der holder i mange år
   </p>
 </header>
@@ -230,113 +163,8 @@
 
 <section class="hero">
   <h2>Professionel brolægning med øje for detaljen</h2>
-  <p>
-    Hos Dannebrolægning får du gennemført håndværk, klar kommunikation og et resultat,
-    der både er flot at se på og stærkt nok til daglig brug.
-  </p>
+  <p>Hos Dannebrolægning får du gennemført håndværk, klar kommunikation og et resultat, der holder.</p>
   <a class="btn" href="#kontakt">Få et gratis tilbud</a>
-</section>
-
-<section id="ydelser">
-  <h2>Vores ydelser</h2>
-  <div class="services">
-    <div class="service">
-      <h3>Indkørsler & terrasser</h3>
-      <p>
-        Vi skaber indkørsler og terrasser, der løfter hele boligens udtryk og samtidig
-        holder i mange år – uden sætninger og sjusk.
-      </p>
-    </div>
-    <div class="service">
-      <h3>Støttemure & trapper</h3>
-      <p>
-        Funktionelle og æstetiske løsninger i natursten og beton – perfekt til
-        niveauforskelle og skrånende terræn.
-      </p>
-    </div>
-    <div class="service">
-      <h3>Belægning & anlæg</h3>
-      <p>
-        Fra mindre haveprojekter til større entrepriser. Vi tager ansvar for hele
-        processen – fra bundopbygning til færdigt resultat.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="projekter">
-  <h2>Vores arbejde</h2>
-  <div class="services">
-
-    <div class="service">
-      <img src="projekt2.jpg" alt="Haveanlæg med natursten" style="width:100%; border-radius:10px; margin-bottom:1rem;" />
-      <h3>Haveanlæg med natursten</h3>
-      <p>
-        Eksklusivt haveanlæg med store kampesten og naturlige niveauer, der skaber et
-        roligt og harmonisk udtryk. Fokus på korrekt bundopbygning og lang holdbarhed.
-      </p>
-    </div>
-
-    <div class="service">
-      <img src="projekt3.jpg" alt="Indgangsparti med belægning" style="width:100%; border-radius:10px; margin-bottom:1rem;" />
-      <h3>Indgangspartier & belægning</h3>
-      <p>
-        Flotte og funktionelle indgangspartier, der giver et solidt førstehåndsindtryk.
-        Udført med præcision og sans for detaljen.
-      </p>
-    </div>
-
-    <div class="service">
-      <img src="projekt4.jpg" alt="Støttemur og stentrappe" style="width:100%; border-radius:10px; margin-bottom:1rem;" />
-      <h3>Støttemure & trapper</h3>
-      <p>
-        Løsninger til skrånende terræn med støttemure og stentrapper, der både er
-        praktiske og æstetiske.
-      </p>
-    </div>
-
-    <div class="service">
-      <img src="projekt5.jpg" alt="Terrasse og indkørsel" style="width:100%; border-radius:10px; margin-bottom:1rem;" />
-      <h3>Terrasser & indkørsler</h3>
-      <p>
-        Slidstærke belægninger til daglig brug – bygget korrekt fra bunden, så de holder
-        uden sætninger og revner.
-      </p>
-    </div>
-
-    <div class="service">
-      <img src="projekt6.jpg" alt="Brolagt haveområde" style="width:100%; border-radius:10px; margin-bottom:1rem;" />
-      <h3>Brolagte haveområder</h3>
-      <p>
-        Smukke og funktionelle haveområder, hvor materialevalg og udførelse går op i
-        en højere enhed.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section id="om" class="about">
-  <h2>Om Dannebrolægning</h2>
-  <p>
-    Dannebrolægning blev grundlagt i 2006 af brolægger Thor Sundstrøm. Med svendeprøve
-    siden 2000 og mange års erfaring i branchen er kvalitet og faglig stolthed altid i
-    centrum.
-  </p>
-  <p>
-    Thor har arbejdet med både store entrepriser og mindre opgaver for private kunder.
-    Det betyder, at du får en brolægger, der forstår både de tekniske detaljer og dine
-    ønsker – og som ikke går på kompromis med kvaliteten.
-  </p>
-</section>
-
-<section id="kontakt" class="contact">
-  <h2>Kontakt os i dag</h2>
-  <p>Har du et projekt i tankerne? Så lad os tage en snak – det er helt uforpligtende.</p>
-  <p><strong>Thor Sundstrøm – Brolægger</strong></p>
-  <p>Telefon: 12 34 56 78</p>
-  <p>Email: info@dannebrolaegning.dk</p>
-  <a class="btn" href="tel:12345678">Ring nu</a>
 </section>
 
 <footer>
