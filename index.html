@@ -1,22 +1,64 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dannebrolægning | Brolægger Thor Sundstrøm</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dannebrolægning | Brolægger</title>
+
   <style>
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
-      color: #222;
       background: #fafafa;
+      color: #222;
+      line-height: 1.7;
     }
 
+    /* HEADER */
+    header {
+      background: #0f0f0f;
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+      border-bottom: 6px solid #b40000;
+    }
+
+    /* LOGO */
+    .logo {
+      display: grid;
+      grid-template-columns: repeat(2, 28px);
+      grid-template-rows: repeat(2, 28px);
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .logo span {
+      background: #b40000;
+      box-shadow: 0 0 22px rgba(255,0,0,1), 0 0 45px rgba(180,0,0,0.95);
+    }
+
+    .logo .top-right { grid-column: 2; grid-row: 1; }
+    .logo .bottom-left { grid-column: 1; grid-row: 2; }
+    .logo .bottom-right { grid-column: 2; grid-row: 2; }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.6rem;
+      letter-spacing: 3px;
+      text-shadow: 0 0 14px rgba(180,0,0,0.7);
+    }
+
+    header p {
+      margin-top: 1rem;
+      color: #ddd;
+    }
+
+    /* NAV */
     nav {
       background: #b40000;
-      padding: 0.7rem;
       text-align: center;
+      padding: 0.8rem;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -24,23 +66,22 @@
 
     nav a {
       color: #fff;
-      margin: 0 0.8rem;
+      margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
-      font-size: 0.95rem;
     }
 
+    /* SECTIONS */
     section {
-      padding: 3.5rem 1.2rem;
       max-width: 1100px;
       margin: auto;
+      padding: 3rem 1rem;
     }
 
     h2 {
       text-align: center;
-      font-size: 2.1rem;
-      margin-bottom: 2rem;
-      position: relative;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     h2::after {
@@ -50,26 +91,20 @@
       height: 4px;
       background: #b40000;
       margin: 0.8rem auto 0;
-      border-radius: 2px;
     }
 
+    /* HERO */
     .hero {
       text-align: center;
-      background: linear-gradient(135deg, #f2f2f2, #ffffff);
-      border-radius: 14px;
+      background: #fff;
+      border-radius: 16px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.1rem;
     }
 
     .btn {
       display: inline-block;
       margin-top: 2rem;
-      padding: 0.9rem 1.9rem;
+      padding: 0.9rem 2rem;
       background: #b40000;
       color: #fff;
       text-decoration: none;
@@ -78,34 +113,33 @@
       box-shadow: 0 6px 15px rgba(180,0,0,0.35);
     }
 
-    .services {
+    /* SERVICES + PROJECTS */
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 2rem;
     }
 
-    .service {
+    .card {
       background: #fff;
-      padding: 2.2rem;
+      padding: 2rem;
       border-radius: 14px;
       box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .service img {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .service:hover img {
+    .card:hover img {
       transform: scale(1.03);
       box-shadow: 0 0 0 3px rgba(180,0,0,0.6), 0 0 25px rgba(180,0,0,0.55);
     }
 
-    .about {
-      background: #f5f5f5;
-      border-radius: 18px;
-    }
-
+    /* CONTACT */
     .contact {
       background: linear-gradient(135deg, #1c1c1c, #000);
       color: #fff;
@@ -120,38 +154,23 @@
       padding: 1.4rem;
       font-size: 0.9rem;
     }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+    }
   </style>
 </head>
 <body>
 
-<header style="background:#0f0f0f; color:#fff; padding:3.2rem 1rem 3rem; text-align:center; border-bottom:6px solid #b40000;">
-
-  <!-- FIRKANTER – KORREKT ORIENTERING -->
-  <div style="
-    display:grid;
-    grid-template-columns: repeat(2, 28px);
-    grid-template-rows: repeat(2, 28px);
-    gap:8px;
-    justify-content:center;
-    margin-bottom:1.2rem;
-  ">
-    <!-- ØVERST HØJRE -->
-    <span style="grid-column:2; grid-row:1; background:#b40000; box-shadow:0 0 22px rgba(255,0,0,1), 0 0 45px rgba(180,0,0,0.95);"></span>
-
-    <!-- NEDERST VENSTRE -->
-    <span style="grid-column:1; grid-row:2; background:#b40000; box-shadow:0 0 22px rgba(255,0,0,1), 0 0 45px rgba(180,0,0,0.95);"></span>
-
-    <!-- NEDERST HØJRE -->
-    <span style="grid-column:2; grid-row:2; background:#b40000; box-shadow:0 0 22px rgba(255,0,0,1), 0 0 45px rgba(180,0,0,0.95);"></span>
+<header>
+  <div class="logo">
+    <span class="top-right"></span>
+    <span class="bottom-left"></span>
+    <span class="bottom-right"></span>
   </div>
 
-  <h1 style="font-size:2.8rem; letter-spacing:3px; margin:0; text-shadow:0 0 16px rgba(180,0,0,0.75);">
-    DANNEBROLÆGNING
-  </h1>
-
-  <p style="margin-top:1rem; font-size:1.15rem; color:#ddd;">
-    Professionelt brolæggerarbejde – kvalitet, der holder i mange år
-  </p>
+  <h1>DANNEBROLÆGNING</h1>
+  <p>Professionelt brolæggerarbejde – kvalitet der holder</p>
 </header>
 
 <nav>
@@ -163,12 +182,70 @@
 
 <section class="hero">
   <h2>Professionel brolægning med øje for detaljen</h2>
-  <p>Hos Dannebrolægning får du gennemført håndværk, klar kommunikation og et resultat, der holder.</p>
-  <a class="btn" href="#kontakt">Få et gratis tilbud</a>
+  <p>
+    Hos Dannebrolægning får du solidt håndværk, klar kommunikation og resultater,
+    der holder i mange år.
+  </p>
+  <a href="#kontakt" class="btn">Få et gratis tilbud</a>
+</section>
+
+<section id="ydelser">
+  <h2>Vores ydelser</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Indkørsler & terrasser</h3>
+      <p>Holdbare og flotte løsninger bygget korrekt fra bunden.</p>
+    </div>
+    <div class="card">
+      <h3>Støttemure & trapper</h3>
+      <p>Funktionelle løsninger til niveauforskelle og terræn.</p>
+    </div>
+    <div class="card">
+      <h3>Belægning & anlæg</h3>
+      <p>Små og store projekter for private og erhverv.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projekter">
+  <h2>Vores projekter</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="projekt2.jpg" alt="">
+      <h3>Haveanlæg</h3>
+      <p>Naturligt og eksklusivt udtryk med kampesten.</p>
+    </div>
+    <div class="card">
+      <img src="projekt3.jpg" alt="">
+      <h3>Indgangsparti</h3>
+      <p>Flot førstehåndsindtryk med præcision.</p>
+    </div>
+    <div class="card">
+      <img src="projekt4.jpg" alt="">
+      <h3>Støttemur</h3>
+      <p>Stabil og æstetisk løsning.</p>
+    </div>
+  </div>
+</section>
+
+<section id="om">
+  <h2>Om Dannebrolægning</h2>
+  <p style="text-align:center; max-width:800px; margin:auto;">
+    Dannebrolægning drives af Thor Sundstrøm og bygger på mange års erfaring,
+    faglig stolthed og fokus på kvalitet.
+  </p>
+</section>
+
+<section id="kontakt" class="contact">
+  <h2>Kontakt os</h2>
+  <p><strong>Thor Sundstrøm – Brolægger</strong></p>
+  <p>Telefon: 12 34 56 78</p>
+  <p>Email: info@dannebrolaegning.dk</p>
+  <a href="tel:12345678" class="btn">Ring nu</a>
 </section>
 
 <footer>
-  <p>© 2026 Dannebrolægning – Kvalitet, der kan ses og mærkes</p>
+  © 2026 Dannebrolægning – Kvalitet, der kan ses og mærkes
 </footer>
 
 </body>
