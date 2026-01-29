@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dannebrolægning | Brolægger</title>
+  <title>Brolægger Dannebrolægning | En sten sikker løsning</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Professionel brolægger. Indkørsler, terrasser, støttemure og belægning. En sten sikker løsning. Ring 50 56 70 65.">
 
   <style>
     body {
@@ -51,10 +54,9 @@
     header p {
       margin-top: 1rem;
       color: #ddd;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
     }
 
-    /* NAV */
     nav {
       background: #b40000;
       text-align: center;
@@ -69,8 +71,6 @@
       margin: 0.5rem 1rem;
       text-decoration: none;
       font-weight: bold;
-      display: inline-block;
-      font-size: 1rem;
     }
 
     section {
@@ -101,12 +101,6 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.1rem;
-    }
-
     .btn {
       display: inline-block;
       margin-top: 2rem;
@@ -132,16 +126,22 @@
       box-shadow: 0 8px 22px rgba(0,0,0,0.08);
     }
 
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-      transition: transform 0.3s, box-shadow 0.3s;
+    /* TRUST */
+    .trust {
+      background: #f5f5f5;
+      border-radius: 18px;
     }
 
-    .card:hover img {
-      transform: scale(1.03);
-      box-shadow: 0 0 0 3px rgba(180,0,0,0.6), 0 0 25px rgba(180,0,0,0.55);
+    .trust ul {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .trust li {
+      padding: 0.6rem 0;
+      font-weight: 500;
     }
 
     .contact {
@@ -159,20 +159,30 @@
       font-size: 0.9rem;
     }
 
-    /* 📱 MOBIL */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
+    /* 📞 STICKY CALL – MOBIL */
+    .call-now {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .call-now {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #b40000;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        z-index: 999;
       }
 
-      .btn {
-        width: 100%;
-        max-width: 320px;
-      }
-
-      nav a {
-        margin: 0.4rem;
-        font-size: 0.95rem;
+      .call-now a {
+        color: #fff;
+        text-decoration: none;
       }
     }
   </style>
@@ -186,8 +196,8 @@
     <span class="bottom-right"></span>
   </div>
 
-  <h1>DANNEBROLÆGNING</h1>
-  <p>Professionelt brolæggerarbejde – kvalitet der holder</p>
+  <h1>Brolægger Dannebrolægning</h1>
+  <p>En sten sikker løsning</p>
 </header>
 
 <nav>
@@ -198,10 +208,10 @@
 </nav>
 
 <section class="hero">
-  <h2>Professionel brolægning med øje for detaljen</h2>
+  <h2>Professionel brolægning fra bund til færdigt resultat</h2>
   <p>
-    Hos Dannebrolægning får du solidt håndværk, klar kommunikation og resultater,
-    der holder i mange år.
+    Vi udfører brolægning, indkørsler, terrasser og støttemure med fokus på kvalitet,
+    korrekt bundopbygning og et resultat, der holder i mange år.
   </p>
   <a href="#kontakt" class="btn">Få et gratis tilbud</a>
 </section>
@@ -209,48 +219,20 @@
 <section id="ydelser">
   <h2>Vores ydelser</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Indkørsler & terrasser</h3>
-      <p>Holdbare og flotte løsninger bygget korrekt fra bunden.</p>
-    </div>
-    <div class="card">
-      <h3>Støttemure & trapper</h3>
-      <p>Funktionelle løsninger til niveauforskelle og terræn.</p>
-    </div>
-    <div class="card">
-      <h3>Belægning & anlæg</h3>
-      <p>Små og store projekter for private og erhverv.</p>
-    </div>
+    <div class="card"><h3>Indkørsler & terrasser</h3></div>
+    <div class="card"><h3>Støttemure & trapper</h3></div>
+    <div class="card"><h3>Belægning & anlæg</h3></div>
   </div>
 </section>
 
-<section id="projekter">
-  <h2>Vores projekter</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="projekt2.jpg" alt="">
-      <h3>Haveanlæg</h3>
-      <p>Naturligt og eksklusivt udtryk med kampesten.</p>
-    </div>
-    <div class="card">
-      <img src="projekt3.jpg" alt="">
-      <h3>Indgangsparti</h3>
-      <p>Flot førstehåndsindtryk med præcision.</p>
-    </div>
-    <div class="card">
-      <img src="projekt4.jpg" alt="">
-      <h3>Støttemur</h3>
-      <p>Stabil og æstetisk løsning.</p>
-    </div>
-  </div>
-</section>
-
-<section id="om">
-  <h2>Om Dannebrolægning</h2>
-  <p style="text-align:center; max-width:800px; margin:auto;">
-    Dannebrolægning drives af Thor Sundstrøm med fokus på kvalitet,
-    faglig stolthed og ordentligt håndværk.
-  </p>
+<section class="trust">
+  <h2>Derfor vælger kunder Dannebrolægning</h2>
+  <ul>
+    <li>✔ Over 20 års erfaring</li>
+    <li>✔ Korrekt bundopbygning</li>
+    <li>✔ Aftaler overholdes</li>
+    <li>✔ Solidt håndværk – ingen smutveje</li>
+  </ul>
 </section>
 
 <section id="kontakt" class="contact">
@@ -263,6 +245,10 @@
 <footer>
   © 2026 Dannebrolægning – En sten sikker løsning
 </footer>
+
+<div class="call-now">
+  <a href="tel:50567065">📞 Ring 50 56 70 65</a>
+</div>
 
 </body>
 </html>
